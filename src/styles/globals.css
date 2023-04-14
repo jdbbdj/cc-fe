@@ -3,23 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --main-dark: #1b1b1b;
+  --second-dark: #29323e;
+  --third-dark: #b3afb0;
+  --fourth-dark: #3e3a39;
+  --main-light: #ededed;
+  --second-light: #728393;
+  font-family: "Poppins", sans-serif;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.navbar-main {
+  background: var(--third-dark);
 }
-
-body {
-  color: rgb(var(--foreground-rgb));
+.promo-header {
+  background: var(--main-dark);
 }
 
 .layout-main {
-  border: 1px solid black;
 }

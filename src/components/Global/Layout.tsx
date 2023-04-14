@@ -1,11 +1,8 @@
-type Props = {
-  children: ReactElement;
-};
-
 import React, { ReactElement } from "react";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import Header from "./Header";
+
 const Layout: React.FC<Props> = ({ children }) => {
   return (
     <React.Fragment>
@@ -18,6 +15,10 @@ const Layout: React.FC<Props> = ({ children }) => {
       </div>
     </React.Fragment>
   );
+};
+
+type Props = {
+  children: ReactElement;
 };
 
 export default Layout;
