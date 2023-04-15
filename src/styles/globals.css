@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  transition: background-color 0.2s ease-in-out;
+}
 :root {
   --main-dark: #1b1b1b;
   --second-dark: #29323e;
@@ -9,5 +12,6 @@
   --fourth-dark: #3e3a39;
   --main-light: #ededed;
   --second-light: #728393;
+
   font-family: "Poppins", sans-serif;
 }
