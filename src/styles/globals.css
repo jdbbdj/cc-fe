@@ -11,13 +11,3 @@
   --second-light: #728393;
   font-family: "Poppins", sans-serif;
 }
-
-.navbar-main {
-  background: var(--third-dark);
-}
-.promo-header {
-  background: var(--main-dark);
-}
-
-.layout-main {
-}
