@@ -8,6 +8,7 @@ function Categories() {
       {categories.map((item) => {
         return (
           <CategoryItem
+            key={item.id}
             id={item.id}
             src={item.img}
             title={item.title.toUpperCase()}
