@@ -12,7 +12,6 @@ const styles = {
     fontWeight: "700",
   },
   subheader: {
-    color: "black",
     fontSize: 22,
     fontWeight: "400",
   },
@@ -33,12 +32,22 @@ const styles = {
 };
 const Typography = (props: Props) => {
   const { classType, type, text } = props;
+  const classHandler = () => {
+    switch (type) {
+      case "subheader-white":
+        return "text-white";
+      case "subheader":
+        return "text-black dark:text-white";
+    }
+  };
   const typeHandler = () => {
     switch (type) {
       case "header":
         return styles.header;
+      case "subheader-white":
       case "subheader":
         return styles.subheader;
+
       case "button":
         return styles.button;
       case "default-white":
@@ -50,7 +59,10 @@ const Typography = (props: Props) => {
     }
   };
   return (
-    <p className={`main-text ${classType}`} style={typeHandler()}>
+    <p
+      className={`main-text ${classType} ${classHandler()}`}
+      style={typeHandler()}
+    >
       {text}
     </p>
   );

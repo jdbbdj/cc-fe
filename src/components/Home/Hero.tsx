@@ -22,7 +22,7 @@ const Hero = () => {
             type="subheader"
             text="PROUDLY PHILIPPINE-MADE FASHION IN MODERN DESIGN."
           />
-          <Button type="default" text="ORDER NOW >" />
+          <Button type="default" text="SHOP NOW >" />
         </HeroRight>
       </HeroWrapper>
     </Container>
