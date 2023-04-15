@@ -1,39 +1,61 @@
-import React from "react";
-import Typography from "../Typography";
+import React, { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
+import { Center, Container, Left, Right, Wrapper } from "./styled";
+import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
+import Typography from "../Typography";
+import Announcement from "./Announcement";
 function Navbar() {
-  return (
-    <div className="navbar-main h-16">
-      {/*PROMO -------------------------------------*/}
-      <div className="promo-header h-5 justify-center items-center text-center">
-        <Typography
-          type="default-white"
-          text="Super deals! Free shipping for orders above P500"
+  const { systemTheme, theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  const renderThemeChanger = () => {
+    if (!mounted) return null;
+    const currentTheme = theme === "system" ? systemTheme : theme;
+
+    if (currentTheme === "light") {
+      return (
+        <MoonIcon
+          className="h-6 w-6 cursor-pointer"
+          onClick={() => setTheme("dark")}
         />
-      </div>
-
-      {/*LOGO HEADER NAVS -------------------------------------*/}
-      <div className="navbar-second flex flex-row justify-between items-center px-4">
-        <div
-          className="flex flex-row justify-between"
-          style={{ width: "calc((100% - 470px))" }}
-        >
-          <Image src="/svg/logo.svg" alt="My SVG file" width={48} height={48} />
+      );
+    } else {
+      return (
+        <SunIcon
+          className="h-6 w-6 cursor-pointer"
+          onClick={() => setTheme("light")}
+        />
+      );
+    }
+  };
+  return (
+    <Container className="bg-third-dark dark:bg-second-light ">
+      <Announcement />
+      <Wrapper>
+        <Left>
+          <Image src="/svg/logo.svg" alt="Logo" width={48} height={48} />
+        </Left>
+        <Center>
           <Typography type="header" text="CONG CLOTHING" />
-        </div>
-
-        <div className="navigations flex flex-row justify-around items-center w-48">
-          <Typography type="default" text="REGISTER" />
-          <Typography type="default" text="SIGN IN" />
+        </Center>
+        <Right>
+          <Typography classType="mr-2" type="default" text="REGISTER" />
+          <Typography classType="mr-2" type="default" text="SIGN IN" />
           <Image
+            className="mr-2"
             src="/svg/shopping.svg"
-            alt="My SVG file"
+            alt="Shopping"
+            color={"white"}
             width={24}
             height={24}
           />
-        </div>
-      </div>
-    </div>
+          <div>{renderThemeChanger()}</div>
+        </Right>
+      </Wrapper>
+    </Container>
   );
 }
 
