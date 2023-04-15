@@ -1,4 +1,5 @@
 import React from "react";
+import Typography from "../Typography";
 type Props = {
   text: string;
   type: string;
@@ -11,36 +12,23 @@ const styles = {
     fontSize: 32,
     fontWeight: "700",
   },
-  subheader: {
-    color: "black",
-    fontSize: 22,
-    fontWeight: "400",
-  },
-  button: {
-    color: "black",
-    fontSize: 14,
-    fontWeight: "700",
-  },
   default_white: {
     fontSize: 14,
     fontWeight: "400",
   },
   default: {
-    color: "black",
-    fontSize: 14,
-    fontWeight: "400",
+    border: "1px solid black",
+    width: 150,
+    padding: 15,
+    boxShadow: "10px 15px 0px #000000",
   },
 };
-const Typography = (props: Props) => {
+const Button = (props: Props) => {
   const { classType, type, text } = props;
   const typeHandler = () => {
     switch (type) {
       case "header":
         return styles.header;
-      case "subheader":
-        return styles.subheader;
-      case "button":
-        return styles.button;
       case "default-white":
         return styles.default_white;
       case "default":
@@ -50,12 +38,12 @@ const Typography = (props: Props) => {
     }
   };
   return (
-    <p className={`main-text ${classType}`} style={typeHandler()}>
-      {text}
-    </p>
+    <button className={`main-text ${classType}`} style={typeHandler()}>
+      <Typography text={text} type="button" />
+    </button>
   );
 };
-Typography.defaultProps = {
+Button.defaultProps = {
   classType: "",
 };
-export default Typography;
+export default Button;

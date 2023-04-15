@@ -1,7 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useTheme } from "next-themes";
-import { Container } from "./styled";
+import { Center, Container, Left, Right, Wrapper } from "./styled";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
+import Image from "next/image";
+import Typography from "../Typography";
+import Announcement from "./Announcement";
 function Navbar() {
   const { systemTheme, theme, setTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
@@ -29,9 +32,29 @@ function Navbar() {
     }
   };
   return (
-    <Container className="bg-second-dark dark:bg-main-light  trainsition-bg">
-      <div className="bg-main-dark dark:bg-second-light h-6 w-6 transition-bg"></div>
-      <div>{renderThemeChanger()}</div>
+    <Container className="bg-third-dark dark:bg-second-light ">
+      <Announcement />
+      <Wrapper>
+        <Left>
+          <Image src="/svg/logo.svg" alt="Logo" width={48} height={48} />
+        </Left>
+        <Center>
+          <Typography type="header" text="CONG CLOTHING" />
+        </Center>
+        <Right>
+          <Typography classType="mr-2" type="default" text="REGISTER" />
+          <Typography classType="mr-2" type="default" text="SIGN IN" />
+          <Image
+            className="mr-2"
+            src="/svg/shopping.svg"
+            alt="Shopping"
+            color={"white"}
+            width={24}
+            height={24}
+          />
+          <div>{renderThemeChanger()}</div>
+        </Right>
+      </Wrapper>
     </Container>
   );
 }
