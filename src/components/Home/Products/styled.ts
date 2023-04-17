@@ -38,7 +38,6 @@ export const ProductItemWrapper = styled.div`
   flex: 1;
   position: relative;
   margin-right: 5px;
-  max-height: 227.5px;
 `;
 export const ProductItemImage = styled(Image)`
   z-index: 25;
