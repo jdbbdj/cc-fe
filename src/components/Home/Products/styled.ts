@@ -65,4 +65,5 @@ export const ProductActions = styled.div`
 export const VideoWrapper = styled.div`
   height: 45%;
   width: 100%;
+  margin-top: 45px;
 `;
