@@ -4,12 +4,13 @@ import Header from "../Global/Header";
 import Footer from "../Global/Footer";
 import Navbar from "../Global/Navbar";
 import Categories from "./Categories/Categories";
-
+import ProductLanding from "./Products";
 function Home() {
   return (
     <React.Fragment>
       <Hero />
       <Categories />
+      <ProductLanding />
     </React.Fragment>
   );
 }
