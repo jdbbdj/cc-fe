@@ -14,6 +14,7 @@ const ProductNavigator = () => {
       {productsNavigation.map((navs) => {
         return (
           <ProductsNav
+            key={navs.id}
             className={navs.id === tab ? "opacity-100" : "opacity-50"}
             onClick={() => {
               handleClick(navs.id);
