@@ -18,6 +18,11 @@ export const CategoryImage = styled(Image)``;
 export const InfoWrapper = styled.div`
   position: absolute;
   top: 35%;
-  left: 25%;
+  left: 0%;
   text-align: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;

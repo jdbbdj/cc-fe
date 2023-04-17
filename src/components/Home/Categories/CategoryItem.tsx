@@ -23,7 +23,7 @@ function CategoryItem(props: Props) {
       <InfoWrapper
         className={`${id === 4 || id === 5 ? "ml-7 mt-10" : "ml-0"}`}
       >
-        <Typography text={title} type="subheader-white" />
+        <Typography text={title} type="category-header" />
         <Button classType={`bg-white `} type="default" text="SHOP NOW >" />
       </InfoWrapper>
     </CategoryItemContainer>

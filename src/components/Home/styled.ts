@@ -13,7 +13,8 @@ export const HeroWrapper = styled.div`
 export const CustomImage = styled(Image)`
   flex: 1;
   margin-top: 50px;
-  height: 450px;
+  max-height: 450px;
+  right: 5%;
 `;
 
 export const HeroRight = styled.div`
