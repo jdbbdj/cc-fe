@@ -67,11 +67,12 @@ function Footer() {
           <FooterMiddleLeft>
             {footers.map((footer) => {
               return (
-                <FooterDetails>
+                <FooterDetails key={footer.id}>
                   <Typography type="subheader-white" text={footer.title} />
                   {footer.subfooters.map((subfooter) => {
                     return (
                       <Typography
+                        key={subfooter}
                         classType="opacity-50"
                         type="subheader-white"
                         text={subfooter}
