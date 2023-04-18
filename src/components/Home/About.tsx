@@ -16,7 +16,7 @@ const About = () => {
         <AboutUpper>
           {about.map((item) => {
             return (
-              <AboutDivs>
+              <AboutDivs key={item.id}>
                 <Typography type="category-header-black" text={item.title} />
                 <br></br>
                 <Typography type="about" text={item.description} />
