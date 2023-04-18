@@ -71,12 +71,13 @@ function Footer() {
                   <Typography type="subheader-white" text={footer.title} />
                   {footer.subfooters.map((subfooter) => {
                     return (
-                      <Typography
-                        key={subfooter}
-                        classType="opacity-50"
-                        type="subheader-white"
-                        text={subfooter}
-                      />
+                      <div key={subfooter}>
+                        <Typography
+                          classType="opacity-50"
+                          type="subheader-white"
+                          text={subfooter}
+                        />
+                      </div>
                     );
                   })}
                 </FooterDetails>
