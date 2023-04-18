@@ -68,3 +68,18 @@ export const productItem = [
     title: "collections",
   },
 ];
+
+export const about = [
+  {
+    id: 0,
+    title: "What is Cong Clothing?",
+    description:
+      "CongTV has developed a line of merchandise featuring his logo and catchphrases, which has gained popularity among his fans and supporters. These items are marketed and sold through his website and various online platforms, providing a unique opportunity for fans to express their support for the YouTuber and connect with his brand beyond his videos. By offering branded merchandise, CongTV is not only promoting his personal brand but also creating a revenue stream through the sale of physical products.",
+  },
+  {
+    id: 1,
+    title: "What do we offer?",
+    description:
+      "We offer a range of affordable and comfortable clothing options that cater to different styles and preferences. Our garments are made using cost-effective materials and production processes, without compromising on quality or comfort. Our marketing efforts focus on highlighting the comfort features and competitive pricing of our clothing line, catering to customers who value both comfort and cost-effectiveness.",
+  },
+];

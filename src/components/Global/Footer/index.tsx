@@ -1,7 +1,11 @@
 import React from "react";
-
+import { Container, FooterWrapper } from "./styled";
 function Footer() {
-  return <div>Footer</div>;
+  return (
+    <Container>
+      <FooterWrapper></FooterWrapper>
+    </Container>
+  );
 }
 
 export default Footer;
