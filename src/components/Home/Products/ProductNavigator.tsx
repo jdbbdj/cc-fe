@@ -15,12 +15,14 @@ const ProductNavigator = () => {
         return (
           <ProductsNav
             key={navs.id}
-            className={navs.id === tab ? "opacity-100" : "opacity-50"}
+            className={
+              navs.id === tab ? "opacity-100 font-semibold" : "opacity-50"
+            }
             onClick={() => {
               handleClick(navs.id);
             }}
           >
-            <Typography type="subheader" text={navs.title} />
+            <Typography type="product-nav" text={navs.title} />
           </ProductsNav>
         );
       })}

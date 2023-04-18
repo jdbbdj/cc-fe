@@ -7,7 +7,7 @@ export const ProductContainer = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
-  margin-top: 10px;
+  margin-top: 25px;
   padding-left: 25px;
   padding-right: 25px;
 `;

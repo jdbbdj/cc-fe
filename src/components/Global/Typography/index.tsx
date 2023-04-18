@@ -24,15 +24,18 @@ const styles = {
     fontSize: 14,
     fontWeight: "700",
   },
-
   about: {
     fontSize: 18,
     fontWeight: "400",
+  },
+  product_nav: {
+    fontSize: 28,
   },
   default_white: {
     fontSize: 14,
     fontWeight: "400",
   },
+
   default: {
     color: "black",
     fontSize: 14,
@@ -45,8 +48,10 @@ const Typography = (props: Props) => {
     switch (type) {
       case "subheader-white":
       case "category-header":
+      case "default-white":
         return "text-white";
       case "subheader":
+      case "product-nav":
       case "about":
       case "category-header-black":
         return "text-black dark:text-white";
@@ -56,6 +61,8 @@ const Typography = (props: Props) => {
     switch (type) {
       case "header":
         return styles.header;
+      case "product-nav":
+        return styles.product_nav;
       case "subheader-white":
       case "subheader":
         return styles.subheader;
