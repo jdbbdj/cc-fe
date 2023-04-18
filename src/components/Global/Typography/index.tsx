@@ -24,6 +24,11 @@ const styles = {
     fontSize: 14,
     fontWeight: "700",
   },
+
+  about: {
+    fontSize: 18,
+    fontWeight: "400",
+  },
   default_white: {
     fontSize: 14,
     fontWeight: "400",
@@ -42,6 +47,8 @@ const Typography = (props: Props) => {
       case "category-header":
         return "text-white";
       case "subheader":
+      case "about":
+      case "category-header-black":
         return "text-black dark:text-white";
     }
   };
@@ -53,11 +60,14 @@ const Typography = (props: Props) => {
       case "subheader":
         return styles.subheader;
       case "category-header":
+      case "category-header-black":
         return styles.categoryheader;
       case "button":
         return styles.button;
       case "default-white":
         return styles.default_white;
+      case "about":
+        return styles.about;
       case "default":
         return styles.default;
       default:

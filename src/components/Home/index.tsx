@@ -1,8 +1,6 @@
 import React from "react";
 import Hero from "./Hero";
-import Header from "../Global/Header";
-import Footer from "../Global/Footer";
-import Navbar from "../Global/Navbar";
+import About from "./About";
 import Categories from "./Categories/Categories";
 import ProductLanding from "./Products";
 function Home() {
@@ -11,6 +9,7 @@ function Home() {
       <Hero />
       <Categories />
       <ProductLanding />
+      <About />
     </React.Fragment>
   );
 }
