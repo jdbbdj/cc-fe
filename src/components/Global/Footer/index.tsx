@@ -69,9 +69,9 @@ function Footer() {
               return (
                 <FooterDetails key={footer.id}>
                   <Typography type="subheader-white" text={footer.title} />
-                  {footer.subfooters.map((subfooter) => {
+                  {footer.subfooters.map((subfooter, key) => {
                     return (
-                      <div key={subfooter}>
+                      <div key={key}>
                         <Typography
                           classType="opacity-50"
                           type="subheader-white"
