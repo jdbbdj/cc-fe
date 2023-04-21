@@ -6,6 +6,13 @@ export const Container = styled.section`
   position: relative;
 `;
 
+export const AboutContainer = styled.section`
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  margin-top: 350px;
+`;
+
 export const HeroWrapper = styled.div`
   display: flex;
 `;

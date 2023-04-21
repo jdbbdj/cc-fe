@@ -20,7 +20,6 @@ type Props = {
 };
 
 const ProductItem = (props: Props) => {
-  const [onhover, setOnHover] = useState(false);
   const { product } = props;
   return (
     <ProductItemWrapper>
@@ -32,30 +31,14 @@ const ProductItem = (props: Props) => {
         sizes="100vw"
         className="w-full h-auto"
       />
-      <ProductItemHover
-        onMouseOver={() => setOnHover((prev) => !prev)}
-        onMouseLeave={() => setOnHover((prev) => !prev)}
-        className={!onhover ? "none" : "block bg-black"}
-      >
-        <ProductActions
-          onMouseOver={() => setOnHover((prev) => !prev)}
-          onMouseLeave={() => setOnHover((prev) => !prev)}
-          style={{ display: !onhover ? "none" : "block", zIndex: 999 }}
-        >
+      <ProductItemHover>
+        <ProductActions>
           <MagnifyingGlassIcon width={24} height={24} fill="white" />
         </ProductActions>
-        <ProductActions
-          onMouseOver={() => setOnHover((prev) => !prev)}
-          onMouseLeave={() => setOnHover((prev) => !prev)}
-          style={{ display: !onhover ? "none" : "block", zIndex: 999 }}
-        >
+        <ProductActions>
           <HeartIcon width={24} height={24} fill="white" />
         </ProductActions>
-        <ProductActions
-          onMouseOver={() => setOnHover((prev) => !prev)}
-          onMouseLeave={() => setOnHover((prev) => !prev)}
-          style={{ display: !onhover ? "none" : "block", zIndex: 999 }}
-        >
+        <ProductActions>
           <ShoppingCartIcon width={24} height={24} fill="white" />
         </ProductActions>
       </ProductItemHover>

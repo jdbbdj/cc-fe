@@ -11,13 +11,22 @@ const styles = {
     fontSize: 32,
     fontWeight: "700",
   },
-  subheader: {
+  sub_header: {
     fontSize: 22,
     fontWeight: "400",
   },
-  categoryheader: {
+  category_header: {
     fontSize: 22,
     fontWeight: "700",
+  },
+  product_header: {
+    fontSize: 32,
+    fontWeight: "600",
+  },
+  product_filter: {
+    fontSize: 14,
+    fontWeight: "700",
+    opacity: 0.8,
   },
   button: {
     color: "black",
@@ -30,6 +39,10 @@ const styles = {
   },
   product_nav: {
     fontSize: 28,
+  },
+
+  product_amount: {
+    fontSize: 32,
   },
   default_white: {
     fontSize: 14,
@@ -54,6 +67,9 @@ const Typography = (props: Props) => {
       case "product-nav":
       case "about":
       case "category-header-black":
+      case "product-header-black":
+      case "product-filter-black":
+      case "product-amount":
         return "text-black dark:text-white";
     }
   };
@@ -65,10 +81,16 @@ const Typography = (props: Props) => {
         return styles.product_nav;
       case "subheader-white":
       case "subheader":
-        return styles.subheader;
+        return styles.sub_header;
       case "category-header":
       case "category-header-black":
-        return styles.categoryheader;
+        return styles.category_header;
+      case "product-header-black":
+        return styles.product_header;
+      case "product-filter-black":
+        return styles.product_filter;
+      case "product-amount":
+        return styles.product_amount;
       case "button":
         return styles.button;
       case "default-white":
