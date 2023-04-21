@@ -1,6 +1,6 @@
 import React from "react";
 import {
-  Container,
+  AboutContainer,
   AboutWrapper,
   AboutUpper,
   AboutLower,
@@ -11,7 +11,7 @@ import Typography from "../Global/Typography";
 import Button from "../Global/Button";
 const About = () => {
   return (
-    <Container>
+    <AboutContainer>
       <AboutWrapper>
         <AboutUpper>
           {about.map((item) => {
@@ -33,7 +33,7 @@ const About = () => {
           <Button type="default" classType={`bg-white `} text="SIGN UP FREE" />
         </AboutLower>
       </AboutWrapper>
-    </Container>
+    </AboutContainer>
   );
 };
 
