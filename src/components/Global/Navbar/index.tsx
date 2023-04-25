@@ -1,38 +1,34 @@
 import React, { useState, useEffect } from "react";
-import { useTheme } from "next-themes";
+import { useTheme } from "styled-components";
 import { Center, Container, Left, Right, Wrapper } from "./styled";
 import { MoonIcon, SunIcon } from "@heroicons/react/24/solid";
 import Image from "next/image";
 import Typography from "../Typography";
 import Announcement from "./Announcement";
-function Navbar() {
-  const { systemTheme, theme, setTheme } = useTheme();
+import ToggleSwitch from "../ToggleSwitch";
+
+type Props = {
+  handleToggleChange: any;
+};
+function Navbar({ handleToggleChange }: Props) {
   const [mounted, setMounted] = useState(false);
+
+  const [isChecked, setIsChecked] = useState(false);
+
+  const handleChange = (e: any) => {
+    setIsChecked(e.target.checked);
+    handleToggleChange(e);
+  };
   useEffect(() => {
     setMounted(true);
   }, []);
   const renderThemeChanger = () => {
     if (!mounted) return null;
-    const currentTheme = theme === "system" ? systemTheme : theme;
 
-    if (currentTheme === "light") {
-      return (
-        <MoonIcon
-          className="h-6 w-6 cursor-pointer"
-          onClick={() => setTheme("dark")}
-        />
-      );
-    } else {
-      return (
-        <SunIcon
-          className="h-6 w-6 cursor-pointer"
-          onClick={() => setTheme("light")}
-        />
-      );
-    }
+    return <ToggleSwitch checked={isChecked} handleChange={handleChange} />;
   };
   return (
-    <Container className="bg-third-dark dark:bg-second-light ">
+    <Container>
       <Announcement />
       <Wrapper>
         <Left>

@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   height: 75px;
+
+  background-color: ${({ theme }) => theme.navbar};
 `;
 
 export const Wrapper = styled.div`

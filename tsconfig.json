@@ -22,7 +22,8 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
-    "public/svg/hero-blob.js"
+    "public/svg/hero-blob.js",
+    "public/svg/login.js"
   ],
   "exclude": ["node_modules"]
 }
