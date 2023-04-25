@@ -16,6 +16,12 @@ const styles = {
     fontSize: 14,
     fontWeight: "400",
   },
+  custom_default: {
+    border: "1px solid black",
+
+    padding: 15,
+    boxShadow: "10px 15px 0px #000000",
+  },
   default: {
     border: "1px solid black",
     width: 150,
@@ -31,6 +37,9 @@ const Button = (props: Props) => {
         return styles.header;
       case "default-white":
         return styles.default_white;
+
+      case "custom-default":
+        return styles.custom_default;
       case "default":
         return styles.default;
       default:

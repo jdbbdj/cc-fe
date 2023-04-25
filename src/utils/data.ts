@@ -164,3 +164,31 @@ export const product_data = {
     { code: "xl", name: "XL" },
   ],
 };
+
+export const cart_data = {
+  total: 80,
+  shipping: 5.99,
+  discount: 5.0,
+  items: [
+    {
+      title: "VersaShorts",
+      description:
+        "Revolutionize your wardrobe with our versatile VersaShorts! These comfortable and stylish shorts can be worn as trousers, providing the perfect blend of fashion and functionality. Available in various colors and sizes, they are a must-have for any fashion-savvy individual looking to switch up their style",
+      price: 20,
+      img: "/png/products/shorts2.png",
+      color: [{ code: "#000000", name: "Black" }],
+      size: [{ code: "s", name: "S" }],
+      amount: 2,
+    },
+    {
+      title: "VersaShorts",
+      description:
+        "Revolutionize your wardrobe with our versatile VersaShorts! These comfortable and stylish shorts can be worn as trousers, providing the perfect blend of fashion and functionality. Available in various colors and sizes, they are a must-have for any fashion-savvy individual looking to switch up their style",
+      price: 20,
+      img: "/png/products/shorts2.png",
+      color: [{ code: "#000000", name: "Black" }],
+      size: [{ code: "s", name: "S" }],
+      amount: 2,
+    },
+  ],
+};

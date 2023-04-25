@@ -54,7 +54,8 @@ export const ToggleLabel = styled.label`
 
 export const BoxToggleContainer = styled.div`
   flex: 1;
-  margin: 10px;
+  margin: 0px 10px;
+  margin-top: 10px;
 `;
 
 export const BoxToggleLabel = styled.label`
