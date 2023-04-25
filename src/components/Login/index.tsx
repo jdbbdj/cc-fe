@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import useNavigation from "@/pages/navigation/useNavigation";
+
 import {
   LoginContainer,
   LoginWrapper,
@@ -10,7 +10,6 @@ import Logo from "../../../public/svg/login";
 import LabelInput from "../Global/LabelInput";
 import Button from "../Global/Button";
 const LoginComponent = () => {
-  const { router } = useNavigation();
   const [isChecked, setIsChecked] = useState(false);
 
   const handleChange = (e: any) => {
