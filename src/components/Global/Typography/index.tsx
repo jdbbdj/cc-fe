@@ -3,6 +3,7 @@ type Props = {
   text: string;
   type: string;
   classType?: string;
+  handleClick: () => void;
 };
 
 const styles = {
@@ -56,7 +57,7 @@ const styles = {
   },
 };
 const Typography = (props: Props) => {
-  const { classType, type, text } = props;
+  const { classType, type, text, handleClick } = props;
   const classHandler = () => {
     switch (type) {
       case "subheader-white":
@@ -107,6 +108,7 @@ const Typography = (props: Props) => {
     <p
       className={`main-text ${classType} ${classHandler()}`}
       style={typeHandler()}
+      onClick={handleClick}
     >
       {text}
     </p>
@@ -114,5 +116,6 @@ const Typography = (props: Props) => {
 };
 Typography.defaultProps = {
   classType: "",
+  handleClick: null,
 };
 export default Typography;

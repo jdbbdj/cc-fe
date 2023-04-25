@@ -19,6 +19,7 @@ export const Left = styled.div`
 export const Center = styled.div`
   flex: 1;
   text-align: center;
+  cursor: pointer;
 `;
 
 export const Right = styled.div`

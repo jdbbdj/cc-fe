@@ -9,8 +9,9 @@ import ToggleSwitch from "../ToggleSwitch";
 
 type Props = {
   handleToggleChange: any;
+  navigate: any;
 };
-function Navbar({ handleToggleChange }: Props) {
+function Navbar({ handleToggleChange, navigate }: Props) {
   const [mounted, setMounted] = useState(false);
 
   const [isChecked, setIsChecked] = useState(false);
@@ -35,7 +36,13 @@ function Navbar({ handleToggleChange }: Props) {
           <Image src="/svg/logo.svg" alt="Logo" width={48} height={48} />
         </Left>
         <Center>
-          <Typography type="header" text="CONG CLOTHING" />
+          <Typography
+            handleClick={() => {
+              navigate.navigate("/");
+            }}
+            type="header"
+            text="CONG CLOTHING"
+          />
         </Center>
         <Right>
           <Typography classType="mr-2" type="default" text="REGISTER" />
