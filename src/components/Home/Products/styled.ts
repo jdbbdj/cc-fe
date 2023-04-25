@@ -25,7 +25,8 @@ export const ProductItemWrapper = styled.div`
   position: relative;
   margin-top: 10px;
   margin-right: 5px;
-  max-width: 280px;
+  //280px for production
+  max-width: 200px;
   &:hover ${ProductItemHover} {
     opacity: 0.7;
   }

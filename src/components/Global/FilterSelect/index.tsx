@@ -10,21 +10,13 @@ export const ReusableSelect = ({ data, type }: Props) => {
   return (
     <FilterSelect>
       {type !== "default" && (
-        <FilterOption disabled selected>
+        <FilterOption disabled defaultValue={data.title}>
           {data.title}
         </FilterOption>
       )}
 
       {data.options.map((options: any, index: any) => {
-        return (
-          <FilterOption key={index}>
-            <Typography
-              classType={`text-${options.code}`}
-              type="product-filter-black"
-              text={options.name}
-            />
-          </FilterOption>
-        );
+        return <FilterOption key={index}>{options.name}</FilterOption>;
       })}
     </FilterSelect>
   );
